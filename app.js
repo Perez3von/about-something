@@ -50,6 +50,7 @@ function sendAlert(){
             let user_input = prompt(facts_list[j].question);
 
             if (toSmallText(user_input) === facts_list[j].answer[0] || toSmallText(user_input) === facts_list[j].answer[1]){
+
                 counter++;
             }
 
@@ -59,8 +60,8 @@ function sendAlert(){
    
     }
     else {
-      
-        alert("Cancelling...")
+
+        alert("Cancelling...");
         //console.log('not starting...');
     }
 

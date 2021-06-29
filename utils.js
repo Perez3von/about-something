@@ -5,6 +5,8 @@ export function toSmallText(word){
 
 }
 
+
+
 export const facts_list = [
 
     {
