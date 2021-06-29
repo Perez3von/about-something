@@ -112,8 +112,14 @@ footer {
 
   }
 
-  img{
+  #my-image{
 
     width: 300px;
     border-radius: 50%;
+  }
+
+  #start-quiz-btn, #results-section{
+
+
+    visibility: hidden;
   }
