@@ -15,7 +15,7 @@ body {
     
     --header-height: 80px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
-    --gutter: 30px;
+    --gutter: 10px;
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
@@ -110,4 +110,10 @@ footer {
         transform: rotate3d(10, 10, 10, 50deg) scale(1);
     }
 
+  }
+
+  img{
+
+    width: 300px;
+    border-radius: 50%;
   }
