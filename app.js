@@ -7,37 +7,63 @@
   // use user input to update state 
   // update DOM to reflect the new state
 
+import { toSmallText, facts_list } from './utils.js';
+
 const start_quiz_btn = document.getElementById('start-quiz-btn');
+const my_facts = document.getElementById('facts-list');
+const results_section = document.getElementById('results-section');
+
+//start quiz prompting..
+start_quiz_btn.addEventListener('click', sendAlert);
 
 
-start_quiz_btn.addEventListener('click',sendAlert);
+
+//Had to inialize after creating the arr-object
+const arr_length = facts_list.length;
+
+
+//create and add li element for each question on page load
+for (var i = 0;i < arr_length;i++){
+
+    var x = document.createElement('LI');
+
+    var t = document.createTextNode(facts_list[i].fact);
+
+    x.appendChild(t);
+
+    my_facts.appendChild(x);
+
+}
 
 
 function sendAlert(){
 
 
-  if(confirm("Ready to start quiz?")){
+    if (confirm('Ready to start quiz?')){
 
-    console.log("Starting..")
-    
+        //console.log('Starting..');
+
+        let counter = 0;
+
+        for (var j = 0; j < arr_length;j++){
+
+            let user_input = prompt(facts_list[j].question);
+
+            if (toSmallText(user_input) === facts_list[j].answer[0] || toSmallText(user_input) === facts_list[j].answer[1]){
+                counter++;
+            }
+
+            results_section.innerText = `You got ${counter} out of ${arr_length} correct.`;
+
+        }
    
-    const question_one = prompt('Is blue greater than red?');
-    const question_two = prompt('Is the derivative of 3x^2 equal to 6x?');
-    const question_three = prompt('array of colors contains 3 elements?');
-    const question_four = prompt('PI is not equal to 3.1514?');
-
-   // console.log(question_one);
-    //console.log(question_two);
-    //console.log(question_three);
-    //console.log(question_four);
-
-    
-  }
-  else{
-
-    console.log('not starting...')
-  }
+    }
+    else {
+      
+        alert("Cancelling...")
+        //console.log('not starting...');
+    }
 
 
 
-  }
+}
