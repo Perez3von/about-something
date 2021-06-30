@@ -11,21 +11,21 @@ export const facts_list = [
 
     {
 
-        fact: 'blue is greater than red',
+        fact: 'Blue is greater than red.',
         answer: ['yes', 'y'],
         question: 'Is BLUE greater than RED???',
 
     },
 
     {
-        fact: 'd/dx[3x^2] = 6x',
+        fact: 'd/dx[3x^2] = 6x.',
         answer: ['yes', 'y'],
         question: 'Is the derivative of 3x^2 equal to 6x???',
 
     },
 
     {
-        fact: "array_of_colors = [ 'yellow', 'green', 'pink' ]",
+        fact: "Array_of_colors = [ ' yellow ', ' green ', ' pink ' ].",
         answer: ['no', 'n'],
         question: 'The array of colors contains 6 elements???',
 
@@ -39,7 +39,7 @@ export const facts_list = [
     },
 
     {
-        fact: 'Evon loves pizza',
+        fact: 'Evon loves pizza.',
         answer: ['yes', 'y'],
         question: 'Does Evon love pizza???',
 

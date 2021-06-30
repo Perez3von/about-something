@@ -16,11 +16,11 @@ const my_facts = document.getElementById('facts-list');
 const results_section = document.getElementById('results-section');
 const get_facts = document.getElementById('get-facts');
 
-//start quiz prompting..
-start_quiz_btn.addEventListener('click', startGame);
-
 //get the data to play game
 get_facts.addEventListener('click', addFactListElements);
+
+//start quiz prompting..
+start_quiz_btn.addEventListener('click', startGame);
 
 
 //Had to inialize after creating the arr-object
@@ -54,7 +54,7 @@ function startGame(){
 
     if (confirm('Ready to start quiz?')){
 
-        console.log('Starting..');
+        //console.log('Starting..');
         results_section.style.visibility = 'visible';
         
         let counter = 0;
@@ -64,7 +64,7 @@ function startGame(){
             let user_input = prompt(facts_list[j].question);
 
             if (toSmallText(user_input) === facts_list[j].answer[0] || toSmallText(user_input) === facts_list[j].answer[1]){
-
+                
                 counter++;
             }
 
@@ -76,7 +76,7 @@ function startGame(){
     else {
 
         alert('Cancelling...');
-        console.log('not starting...');
+        //console.log('not starting...');
     }
 
 
